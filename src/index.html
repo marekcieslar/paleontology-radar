@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <h1><%= htmlWebpackPlugin.options.title %></h1>
+
+    <div id="wrapper-buttons" class="wrapper wrapper--buttons">
+      <button id="btn-radar" class="btn btn--radar">RADAR</button>
+      <button id="btn-admin" class="btn btn--admin">ADMIN</button>
+    </div>
+
+    <div id="wrapper-image" class="wrapper wrapper--image hide">
+      <div id="image" class="image image--radar image--rotate"></div>
+    </div>
+
+    <div id="wrapper-admin" class="wrapper wrapper--image hide">
+      <button id="btn-admin-radar" class="btn btn--radar">RADAR</button>
+      <button id="btn-admin-bone" class="btn btn--bone">BONE</button>
+      <button id="btn-admin-teeth" class="btn btn--teeth">TEETH</button>
+    </div>
+  </body>
+</html>
