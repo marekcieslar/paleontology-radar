@@ -73,7 +73,7 @@ buttons.bntRadar.addEventListener('click', () => {
   int = setInterval(() => {
     count++;
 
-    if (count > 6) {
+    if (count > 600) {
       clearInterval(int);
       showWrapper(buttons.wrapper);
       hideElement(image.wrapper);
