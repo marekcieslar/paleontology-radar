@@ -1,9 +1,13 @@
 const path = require('path');
+require('dotenv').config();
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const devMode = process.env.NODE_ENV === 'development';
+const secret = process.env.SECRET;
+
+console.log('secret', secret);
 
 const webpackConfig = {
   mode: devMode ? 'development' : 'production',
@@ -24,6 +28,7 @@ const webpackConfig = {
       template: `./src/index.html`,
       minify: devMode,
       hash: !devMode,
+      secret,
     }),
   ],
   module: {

@@ -28,6 +28,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "dotenv": "^8.6.0",
     "faunadb": "^4.3.0"
   }
 }

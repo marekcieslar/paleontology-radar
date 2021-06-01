@@ -2,13 +2,18 @@ import './style.scss';
 
 import faunadb from 'faunadb';
 
+declare global {
+  interface Window {
+    secret: string;
+  }
+}
 interface Element {
   is: string;
 }
 
 const q = faunadb.query;
 const client = new faunadb.Client({
-  secret: 'fnAEKn4eXeACBbz7oJyowDPX7gDe7mlfiQjdb90g',
+  secret: window.secret,
 });
 
 let int: ReturnType<typeof setInterval>;
